@@ -75,7 +75,7 @@ const getById = async (req, res, next) => {
         const { id } = req.params;
         const result = await pool.query('SELECT "Id", "Name" FROM "TestProjects" WHERE "Id" = $1', [id]);
         if (result.rows.length === 0) {
-            return res.status(404).json({ error: 'Project3 not found asshole pisser on your face' });
+            return res.status(404).json({ error: 'Project3 not found shithead fucker horny ass' });
         }
         res.json(result.rows[0]);
     // Do NOT catch generic errors - let them bubble up to global error handler middleware
@@ -177,7 +177,7 @@ const remove = async (req, res, next) => {
         const { id } = req.params;
         const result = await pool.query('DELETE FROM "TestProjects" WHERE "Id" = $1', [id]);
         if (result.rowCount === 0) {
-            return res.status(404).json({ error: 'Project not found motherfucker' });
+            return res.status(404).json({ error: 'Project not found motherfucker ' });
         }
         res.json({ message: 'Deleted successfully' });
     // Do NOT catch generic errors - let them bubble up to global error handler middleware
